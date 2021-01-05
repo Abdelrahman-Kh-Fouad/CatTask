@@ -1,6 +1,8 @@
 package com.example.cattask;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -14,13 +16,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ArrayList<FilmListItem>arr =new ArrayList<FilmListItem>();
-        arr.add(new FilmListItem("spider-man" , getResources().getDrawable(R.drawable.download) , 0 ));
-        arr.add(new FilmListItem("batman" , getResources().getDrawable(R.drawable.download) , 0 ));
-        arr.add(new FilmListItem("tenet" , getResources().getDrawable(R.drawable.download) , 0 ));
-        arr.add(new FilmListItem("darknight" , getResources().getDrawable(R.drawable.download) , 0 ));
-        arr.add(new FilmListItem("superman" , getResources().getDrawable(R.drawable.download) , 0 ));
 
-        FilmListAdaptor filmLad = (ListView)
+        ArrayList<FilmListItem>arr = new ArrayList<FilmListItem>();
+        for(int i =0 ;i < 16 ; i++)
+            arr.add(new FilmListItem("spider-man" , getResources().getDrawable(R.drawable.download) , 12));
+
+
+        RecyclerView recyclerView_vertical =findViewById(R.id.vertical_list);
+        recyclerView_vertical.setLayoutManager(new LinearLayoutManager(  this ));
+        FilmListAdapter ad = new FilmListAdapter(this , arr );
+        recyclerView_vertical.setAdapter(ad);
+
+        RecyclerView recyclerView_horizntal = findViewById(R.id.horizontal_list);
+        recyclerView_horizntal.setLayoutManager(new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL , false ));
+        recyclerView_horizntal.setAdapter(ad);
+
+
     }
+
 }
