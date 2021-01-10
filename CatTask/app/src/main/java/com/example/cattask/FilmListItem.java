@@ -7,16 +7,14 @@ import java.sql.RowId;
 
 public class FilmListItem {
     private String name;
-    private Drawable img;
-    private int time ;
-    public FilmListItem(String name , Drawable img , int time )
+    private String img;
+    public FilmListItem(String name , String img  )
     {
         this.name =name ;
         this.img=img;
-        this.time=0;
     }
 
-    public Drawable getImg() {
+    public String getImg() {
         return img;
     }
 
@@ -24,11 +22,8 @@ public class FilmListItem {
         return name;
     }
 
-    public int getTime() {
-        return time;
-    }
 
-    public void setImg(Drawable img) {
+    public void setImg(String img) {
         this.img = img;
     }
 
@@ -36,7 +31,4 @@ public class FilmListItem {
         this.name = name;
     }
 
-    public void setTime(int time) {
-        this.time = time;
-    }
 }

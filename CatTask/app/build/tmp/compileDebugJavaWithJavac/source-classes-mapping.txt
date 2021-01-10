@@ -1,9 +1,15 @@
-com/example/cattask/FilmListItem.java
- com.example.cattask.FilmListItem
 com/example/cattask/BuildConfig.java
  com.example.cattask.BuildConfig
+com/example/cattask/getimg.java
+ com.example.cattask.getimg
+com/example/cattask/MainActivity.java
+ com.example.cattask.MainActivity
 com/example/cattask/FilmListAdapter.java
  com.example.cattask.FilmListAdapter
  com.example.cattask.FilmListAdapter$ViewHolder
-com/example/cattask/MainActivity.java
- com.example.cattask.MainActivity
+com/example/cattask/FilmListItem.java
+ com.example.cattask.FilmListItem
+com/example/cattask/dbmanager.java
+ com.example.cattask.dbmanager
+com/example/cattask/crawling.java
+ com.example.cattask.crawling

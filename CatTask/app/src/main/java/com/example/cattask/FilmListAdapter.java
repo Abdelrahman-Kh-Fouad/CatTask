@@ -1,8 +1,9 @@
 package com.example.cattask;
-
+//TODO change the drawable
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,8 @@ public class FilmListAdapter extends
     public void onBindViewHolder(@NonNull FilmListAdapter.ViewHolder holder, int position) {
 
         holder.textView.setText(arr.get(position).getName());
-        holder.img.setImageDrawable(arr.get(position).getImg());
+        holder.img.setImageURI (Uri.parse(arr.get(position).getImg()));
+
     }
     @Override
     public int getItemCount() {
